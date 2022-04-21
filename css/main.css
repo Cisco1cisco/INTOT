@@ -411,3 +411,47 @@ header nav div i {
 }
 
 /* End About */
+
+/* Start Portfolio */
+
+.protfolio {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.protfolio .container .port-content {
+    display: grid;
+    grid-template-areas: "one one two"
+        "three four four";
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .protfolio .container .port-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .protfolio .container .port-content>div {
+        flex-basis: 90%;
+    }
+}
+
+.protfolio .container .port-content>div img {
+    width: 100%;
+    height: 100%;
+}
+
+.protfolio .container .port-content .two-col:first-of-type {
+    grid-area: one;
+}
+
+.protfolio .container .port-content .two-col:last-of-type {
+    grid-area: four;
+}
+
+/* End Portfolio */
