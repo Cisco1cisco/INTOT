@@ -455,3 +455,69 @@ header nav div i {
 }
 
 /* End Portfolio */
+
+/* Start Team */
+
+.team {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.team .container .team-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.team .container .team-cont .member {
+    text-align: center;
+}
+
+@media (min-width: 991px) and (max-width: 1199px) {
+    .team .container .team-cont .member:last-of-type {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}
+
+.team .container .team-cont .member img {
+    max-width: 100%;
+}
+
+.team .container .team-cont .member h5 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.team .container .team-cont .member h6 {
+    font-size: 16px;
+    color: #9be604;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.team .container .team-cont .member .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team .container .team-cont .member .socials .icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: #9be604;
+    color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* End Team */
