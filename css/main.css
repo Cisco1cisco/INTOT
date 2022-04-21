@@ -648,6 +648,10 @@ footer {
     position: relative;
 }
 
+footer.sub-page {
+    margin-top: 150px;
+}
+
 footer::before {
     content: "";
     position: absolute;
