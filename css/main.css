@@ -3,6 +3,7 @@
 :root {
     --trans-dur: 0.3s;
     --para-color: #1b161d;
+    --Section-pad: 100px;
 }
 
 /* End Variables */
@@ -323,8 +324,8 @@ header nav div i {
 /* Start About */
 
 .about {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: var(--Section-pad, 100px);
+    padding-bottom: var(--Section-pad, 100px);
     margin-top: 50px;
 }
 
@@ -415,8 +416,8 @@ header nav div i {
 /* Start Portfolio */
 
 .protfolio {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: var(--Section-pad, 100px);
+    padding-bottom: var(--Section-pad, 100px);
 }
 
 .protfolio .container .port-content {
@@ -459,8 +460,13 @@ header nav div i {
 /* Start Team */
 
 .team {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: var(--Section-pad, 100px);
+    padding-bottom: 70px;
+}
+
+.team .container {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #9be604;
 }
 
 .team .container .team-cont {
@@ -521,3 +527,103 @@ header nav div i {
 }
 
 /* End Team */
+
+/* Start Contact */
+
+.contact {
+    padding-top: var(--Section-pad, 100px);
+    padding-bottom: var(--Section-pad, 100px);
+}
+
+.contact .container .title {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.contact .container .title p {
+    font-size: 20px;
+    color: #787877;
+}
+
+.contact .container .title h2 {
+    color: var(--para-color, #1b161d);
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.contact .container .cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .contact .container .cont {
+        flex-direction: column;
+    }
+}
+
+.contact .container .cont form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 50%;
+}
+
+@media (max-width: 768px) {
+    .contact .container .cont form {
+        width: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact .container .cont form {
+        width: 90%;
+    }
+}
+
+.contact .container .cont form input,
+.contact .container .cont form textarea {
+    border: 1px solid #c1c1c2;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.contact .container .cont form input:focus,
+.contact .container .cont form textarea:focus {
+    outline: none;
+}
+
+.contact .container .cont form textarea {
+    height: 200px;
+    resize: vertical;
+}
+
+.contact .container .cont form label {
+    color: #797879;
+    margin-bottom: 10px;
+}
+
+.contact .container .cont form button {
+    background-color: #a0e711;
+    width: fit-content;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+
+.contact .container .cont .image {
+    flex-basis: 50%;
+}
+
+.contact .container .cont .image img {
+    max-width: 100%;
+}
+
+/* End Contact */
