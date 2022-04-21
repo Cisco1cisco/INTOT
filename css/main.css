@@ -2,6 +2,7 @@
 
 :root {
     --trans-dur: 0.3s;
+    --para-color: #1b161d;
 }
 
 /* End Variables */
@@ -61,6 +62,22 @@ ul {
 /* End Global Rules */
 
 /* Start Component */
+
+.main-title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--para-color, #1b161d);
+}
+
+.main-title h2 {
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.main-title p {
+    line-height: 1.7;
+}
+
 /* End Component */
 
 /* Start Header */
@@ -302,3 +319,95 @@ header nav div i {
 }
 
 /* End Landing */
+
+/* Start About */
+
+.about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: 50px;
+}
+
+.about .container .cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .container .cont .main-card {
+    flex-basis: calc((100% / 3 - 30px));
+    text-align: center;
+    color: var(--para-color, #1b161d);
+}
+
+@media (max-width: 991px) {
+    .about .container .cont .main-card {
+        flex-basis: calc((100% / 2) - 30px);
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about .container .cont .main-card {
+        flex-basis: 90%;
+        margin: 0 auto 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about .container .cont .main-card {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .about .container .cont .main-card:last-of-type {
+        margin: 0 auto;
+    }
+}
+
+.about .container .cont .main-card .card {
+    box-shadow: -1px 0px 25px 9px rgb(0 0 0 / 9%);
+    padding: 25px 25px 50px;
+    margin-bottom: 50px;
+}
+
+.about .container .cont .main-card .card .image {
+    margin-bottom: 30px;
+}
+
+.about .container .cont .main-card .card .image img {
+    width: 110px;
+}
+
+.about .container .cont .main-card .card h4 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.about .container .cont .main-card .card p {
+    line-height: 1.7;
+}
+
+.about .container .cont .main-card a {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 10px 30px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    border: 2px solid #c4d70f;
+    color: #c4d70f;
+}
+
+.about .container .cont .main-card a:hover {
+    background-color: #c4d70f;
+    color: white;
+}
+
+/* End About */
