@@ -120,6 +120,12 @@ header nav div:last-of-type {
     -o-transition: var(--trans-dur, 0.3s);
 }
 
+@media (max-width: 768px) {
+    header nav div:last-of-type {
+        margin-right: 0;
+    }
+}
+
 header nav div:last-of-type ul {
     position: absolute;
     top: 40px;
@@ -127,6 +133,12 @@ header nav div:last-of-type ul {
     background-color: #9E9E9E;
     display: none;
     z-index: 2;
+}
+
+@media (max-width: 768px) {
+    header nav div:last-of-type ul {
+        left: -90px;
+    }
 }
 
 header nav div:last-of-type:hover ul {
@@ -141,6 +153,12 @@ header nav div:last-of-type ul::before {
     border-width: 15px;
     border-style: solid;
     border-color: transparent transparent #9E9E9E transparent;
+}
+
+@media (max-width: 768px) {
+    header nav div:last-of-type ul::before {
+        left: 90px;
+    }
 }
 
 header nav div:last-of-type ul li a {
@@ -220,7 +238,7 @@ header nav div i {
 .landing .container .content .text {
     flex-basis: 25%;
     color: white;
-    padding: 50px 70px 10px;
+    padding: 50px 20px 10px;
 }
 
 .landing .container .content .text h1 {
